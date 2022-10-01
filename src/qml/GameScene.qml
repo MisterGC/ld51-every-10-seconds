@@ -47,10 +47,9 @@ ClayWorld {
         readonly property int noCollision: Box.None
     }
 
-    running: !player ? false : player.isAlive
-    property bool paused: false
-    onPausedChanged: gameMusic.volume = gameScene.paused ? .5 : 1
+    running: false
     property var player: null
+    onPlayerChanged: if (player) running = Qt.binding(_ => {return player.isAlive;})
 
     onMapAboutToBeLoaded: {player = null;}
     onMapLoaded: {

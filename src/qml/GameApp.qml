@@ -21,9 +21,29 @@ Rectangle
         id: stack
         anchors.fill: parent
         initialItem: gameSceneComp
+        replaceEnter: Transition {
+            PropertyAnimation {
+                property: "opacity"
+                from: 0;  to: 1
+                duration: 200
+            }
+        }
+        replaceExit: Transition {
+            PropertyAnimation {
+                property: "opacity"
+                from: 1;  to: 0
+                duration: 200
+            }
+        }
     }
 
-    Component {id: gameSceneComp; GameScene{}}
+    Component {
+        id: gameSceneComp;
+               GameScene{
+                   onRunningChanged: if (!running) transitionTo(gameSceneComp)
+               }
+    }
+
     AssetProvider { id: assets }
 
     MediaPlayer {
