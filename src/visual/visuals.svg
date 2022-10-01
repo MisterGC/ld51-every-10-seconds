@@ -7,16 +7,15 @@
    id="svg8"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    sodipodi:docname="visuals.svg"
+   xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <defs
-     id="defs2" />
-  <sodipodi:namedview
+   xmlns:dc="http://purl.org/dc/elements/1.1/"><defs
+     id="defs2" /><sodipodi:namedview
      inkscape:guide-bbox="true"
      inkscape:snap-global="false"
      id="base"
@@ -25,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.25767182"
-     inkscape:cx="3634.4681"
-     inkscape:cy="2871.8701"
+     inkscape:zoom="0.54943976"
+     inkscape:cx="2166.7526"
+     inkscape:cy="2316.9055"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -40,30 +39,18 @@
      showguides="true"
      inkscape:showpageshadow="2"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1">
-    <inkscape:grid
+     inkscape:deskcolor="#d1d1d1"><inkscape:grid
        originy="42.678586"
        originx="647.29129"
        id="grid996"
-       type="xygrid" />
-  </sodipodi:namedview>
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
+       type="xygrid" /></sodipodi:namedview><metadata
+     id="metadata5"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><g
      transform="translate(829.32174,201.87233)"
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
-    <text
+     id="layer1"><text
        id="text1097"
        y="136.64894"
        x="-64.977058"
@@ -103,25 +90,18 @@
          y="289.16068"
          x="-64.977058"
          sodipodi:role="line"
-         id="tspan1516">tbc ...</tspan></text>
-    <g
-       id="g3051" />
-    <g
+         id="tspan1516">tbc ...</tspan></text><g
+       id="g3051" /><g
        id="g2236-5"
        transform="matrix(0.06388788,-0.22791698,0.23770139,0.06125809,1467.5527,601.50891)"
-       style="clip-rule:evenodd;fill-rule:evenodd;stroke:#92887a;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;stroke-opacity:0.952941" />
-    <g
+       style="clip-rule:evenodd;fill-rule:evenodd;stroke:#92887a;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;stroke-opacity:0.952941" /><g
        transform="matrix(0.83818073,0,0,0.83818073,-2193.0471,-291.71875)"
-       id="g5034" />
-    <g
+       id="g5034" /><g
        id="title_image"
-       transform="translate(94.704554,56.185841)"
-       style="fill:#1a1a1a">
-      <g
-         id="g2984">
-        <g
-           id="g2190">
-          <rect
+       transform="translate(41.98658,73.742824)"
+       style="fill:#1a1a1a"><g
+         id="g2984"><g
+           id="g2190"><rect
              y="-152.19633"
              x="-779.30048"
              height="722.08643"
@@ -130,9 +110,7 @@
              style="font-variation-settings:normal;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:3.27441;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
              inkscape:export-filename="/home/mistergc/dev/clayground-game-template/doc/promo_screen1.png"
              inkscape:export-xdpi="41.155739"
-             inkscape:export-ydpi="41.155739" />
-        </g>
-        <text
+             inkscape:export-ydpi="41.155739" /></g><text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:30.3609px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
            x="-698.65155"
@@ -142,24 +120,59 @@
              id="tspan1949"
              style="fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
              x="-698.65155"
-             y="-53.818832">Deep in colorful Space</tspan></text>
-        <rect
-           style="fill:#88aa00;fill-opacity:1;stroke-width:1.074;stop-color:#000000"
+             y="-53.818832">Deep in colorful Space</tspan></text><rect
+           style="fill:#0881cd;fill-opacity:1;stroke-width:1.074;stop-color:#000000"
            id="rect2109"
            width="124.74432"
            height="270.76492"
            x="-311.98169"
            y="373.23431"
-           transform="rotate(42.982454)" />
-        <path
-           style="fill:#ff7f2a;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           transform="rotate(42.982454)" /><path
+           style="fill:#f6a229;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="M -651.2468,278.03249 -604.68675,317.44935 -629.2294,395.2483 -750.65683,438.01166 -720.38536,324.58915 Z"
-           id="path2163" />
-        <path
-           style="fill:#d40000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           id="path2163" /><path
+           style="fill:#0881cd;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="M -547.04265,74.682034 -395.71707,209.08455 -335.08624,-5.5254768 Z"
-           id="path2165" />
-      </g>
-    </g>
-  </g>
-</svg>
+           id="path2165" /></g></g><rect
+       style="fill:#1a1a1a;fill-opacity:1;stroke-width:1.074;stop-color:#000000"
+       id="rect8635"
+       width="161.63623"
+       height="182.21719"
+       x="-58.230122"
+       y="366.68988" /><rect
+       style="fill:#0881cd;fill-opacity:1;stroke-width:1.074;stop-color:#000000"
+       id="rect8418"
+       width="22.861156"
+       height="23.91452"
+       x="-30.42325"
+       y="385.89499" /><rect
+       style="fill:#00bc58;fill-opacity:1;stroke-width:1.074;stop-color:#000000"
+       id="rect8420"
+       width="22.29784"
+       height="22.882996"
+       x="-29.078505"
+       y="419.00546" /><rect
+       style="fill:#fcf532;fill-opacity:1;stroke-width:1.074;stop-color:#000000"
+       id="rect8422"
+       width="22.34034"
+       height="22.647892"
+       x="-28.620138"
+       y="448.05103" /><rect
+       style="fill:#fcfcfc;fill-opacity:1;stroke-width:1.074;stop-color:#000000"
+       id="rect8422-7"
+       width="22.34034"
+       height="22.647892"
+       x="36.387115"
+       y="439.49118" /><rect
+       style="fill:#f6a229;fill-opacity:1;stroke-width:1.074;stop-color:#000000"
+       id="rect8424"
+       width="22.969671"
+       height="23.795456"
+       x="-28.073568"
+       y="478.87848" /><rect
+       style="fill:#ef281e;fill-opacity:1;stroke-width:1.074;stop-color:#000000"
+       id="rect8426"
+       width="21.474524"
+       height="22.475777"
+       x="-27.044069"
+       y="512.05176" /></g></svg>

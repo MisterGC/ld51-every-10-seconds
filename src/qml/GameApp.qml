@@ -15,7 +15,10 @@ Rectangle
     color: "black"
 
     SharedState { id: gameState }
-    Component.onCompleted: gameState.load()
+    Component.onCompleted: {
+        gameState.load();
+        transitionTo(gameSceneComp);
+    }
 
     StackView {
         id: stack

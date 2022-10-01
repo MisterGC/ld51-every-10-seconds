@@ -25,6 +25,15 @@ Item {
     property int buttonWidth: 100
     property string screenBgColor: "#96d6d5ff"
 
+    // Color pallette
+    readonly property color cBLUE: "#0881cd"
+    readonly property color cGREEN: "#00bc58"
+    readonly property color cYELLOW: "#fcf532"
+    readonly property color cORANGE: "#f6a229"
+    readonly property color cRED: "#ef281e"
+    readonly property color cBLACK: "#1a1a1a"
+    readonly property color cWHITE: "#fcfcfc"
+
     // PERSISTENCE
     function load() {gameStorage.load();}
     function save() {gameStorage.save();}
