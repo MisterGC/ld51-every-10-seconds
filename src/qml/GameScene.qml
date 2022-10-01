@@ -65,13 +65,11 @@ ClayWorld {
     }
 
     onMapEntityCreated: (obj, groupId, compName) => {
-        if (obj instanceof Spaceship) {
-            player = obj;
-            player.color = "#d45500";
-        }
-    }
+                            if (obj instanceof Spaceship) player = obj;
+                        }
 
     Keys.forwardTo: theGameCtrl
     GameController { id: theGameCtrl; anchors.fill: parent }
 
 }
+

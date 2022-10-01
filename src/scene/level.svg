@@ -5,7 +5,7 @@
    viewBox="0 0 67.91877 97.965381"
    version="1.1"
    id="svg1623"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
    sodipodi:docname="level.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,16 +24,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4.2869494"
-     inkscape:cx="99.138096"
-     inkscape:cy="104.26995"
+     inkscape:cx="83.859166"
+     inkscape:cy="351.99856"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2560"
-     inkscape:window-height="1371"
+     inkscape:window-width="1312"
+     inkscape:window-height="916"
      inkscape:window-x="0"
-     inkscape:window-y="32"
-     inkscape:window-maximized="1"
+     inkscape:window-y="38"
+     inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -84,12 +84,12 @@
 </desc>
     </rect>
     <rect
-       y="88.114563"
+       y="83.300537"
        x="31.899088"
-       height="3.7390227"
-       width="3.5938382"
+       height="8.5530519"
+       width="2.6063449"
        id="rect5922"
-       style="fill:#d45500;fill-opacity:1;stroke:none;stroke-width:0.124649;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+       style="fill:#d45500;fill-opacity:1;stroke:none;stroke-width:0.160548;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
       <desc
          id="desc5920">{&quot;component&quot;:&quot;Player&quot;}</desc>
     </rect>
