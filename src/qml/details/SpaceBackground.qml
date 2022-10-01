@@ -8,5 +8,6 @@ import Clayground.Svg
 RectBoxBody
 {
     bodyType: Body.Static
+    color: "black"
     active: false // no need for physics
 }

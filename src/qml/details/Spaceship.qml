@@ -11,7 +11,11 @@ RectBoxBody
     id: player
 
     bodyType: Body.Dynamic
+    categories: collCat.player
+    collidesWith: collCat.staticGeo
+
     property int shield: 1
+    readonly property bool isAlive: shield > 0
 
     Component.onCompleted: {
         PhysicsUtils.connectOnEntered(fixtures[0], _onCollision)
@@ -19,8 +23,6 @@ RectBoxBody
     function _onCollision(entity) { if (entity instanceof Asteroid) shield--;}
 
     widthWu: heightWu
-    categories: collCat.player
-    collidesWith: collCat.staticGeo | collCat.enemy
 
     readonly property real veloCompMax: 25
     property real xDirDesire: theGameCtrl.axisX

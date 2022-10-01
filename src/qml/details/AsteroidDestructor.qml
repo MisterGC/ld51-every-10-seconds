@@ -1,11 +1,12 @@
 // (c) serein.pfeiffer@gmail.com - zlib license, see "LICENSE" file
 
 import QtQuick
-import Box2D
 import Clayground.Physics
-import Clayground.Behavior
 
-RectTrigger
+RectBoxBody
 {
-    categories: collCat.staticGeo; collidesWith: collCat.player
+    Component.onCompleted: PhysicsUtils.connectOnEntered(fixtures[0], _onEntered)
+    categories: collCat.staticGeo
+    collidesWith: collCat.asteroid
+    function _onEntered(entity) { entity.destroy(); }
 }

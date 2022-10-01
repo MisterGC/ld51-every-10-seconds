@@ -7,7 +7,7 @@ import Clayground.Physics
 RectBoxBody
 {
     bodyType: Body.Static
-    color: "#504a49"
+    color: "black"
     categories: collCat.staticGeo
-    collidesWith: collCat.player | collCat.enemy
+    collidesWith: collCat.player
 }

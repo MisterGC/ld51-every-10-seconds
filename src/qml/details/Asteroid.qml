@@ -6,22 +6,14 @@ import Box2D
 import Clayground.Physics
 import Clayground.Svg
 
-LivingEntity
+RectBoxBody
 {
     id: enemy
 
-    categories: collCat.enemy
+    color: "white"
+    categories: collCat.asteroid
     collidesWith: collCat.staticGeo | collCat.player
     bodyType: Body.Dynamic
-    maxHealth: 1
-    onHealthChanged: if (health < 0) enemy.destroy()
-    visu.sprites: [
-        Sprite {
-            name: "enemy";
-            source: assets.visual(sourceSvg + "/" + name)
-            frameCount: 1
-            frameRate: 1
-        }
-    ]
-
+    widthWu: 3
+    heightWu: 3
 }

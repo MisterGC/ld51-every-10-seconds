@@ -9,7 +9,6 @@
         <file>details/AsteroidDestructor.qml</file>
         <file>details/SpaceBackground.qml</file>
         <file>details/GameSound.qml</file>
-        <file>details/LivingEntity.qml</file>
         <file>details/Spaceship.qml</file>
         <file>details/SpaceBoundary.qml</file>
         <file>details/AsteroidFactory.qml</file>

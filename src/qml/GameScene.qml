@@ -25,16 +25,20 @@ ClayWorld {
                     ['Player', c1],
                     ['Floor', c2],
                     ['SpaceBoundary', c3],
+                    ['AsteroidFactory', c4],
+                    ['AsteroidDestructor', c5]
                 ])
     Component { id: c1; Spaceship {} }
     Component { id: c2; SpaceBackground {} }
     Component { id: c3; SpaceBoundary {} }
+    Component { id: c4; AsteroidFactory {} }
+    Component { id: c5; AsteroidDestructor {} }
 
 
     // PHYSICS SETTINGS
     gravity: Qt.point(0,0)
     timeStep: 1/60.0
-    //physicsDebugging: true
+    physicsDebugging: false
     QtObject {
         id: collCat
         readonly property int staticGeo: Box.Category1
@@ -43,8 +47,7 @@ ClayWorld {
         readonly property int noCollision: Box.None
     }
 
-
-    running: !player ? false : player.isAlive && !paused
+    running: !player ? false : player.isAlive
     property bool paused: false
     onPausedChanged: gameMusic.volume = gameScene.paused ? .5 : 1
     property var player: null
@@ -60,6 +63,13 @@ ClayWorld {
         gameScene.observedItem = player;
         gameState.fontPixelSize = player.height * .4
         gameMusic.playLooped("level_music");
+    }
+
+    onMapEntityCreated: (obj, groupId, compName) => {
+        if (obj instanceof Spaceship) {
+            player = obj;
+            player.color = "#d45500";
+        }
     }
 
     Keys.forwardTo: theGameCtrl
