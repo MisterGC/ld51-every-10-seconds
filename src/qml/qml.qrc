@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file>AssetProvider.qml</file>
+        <file>GameApp.qml</file>
+        <file>GameScene.qml</file>
+        <file>SharedState.qml</file>
+        <file>main.qml</file>
+        <file>details/Asteroid.qml</file>
+        <file>details/AsteroidDestructor.qml</file>
+        <file>details/SpaceBackground.qml</file>
+        <file>details/GameSound.qml</file>
+        <file>details/LivingEntity.qml</file>
+        <file>details/Spaceship.qml</file>
+        <file>details/SpaceBoundary.qml</file>
+        <file>details/AsteroidFactory.qml</file>
+    </qresource>
+</RCC>

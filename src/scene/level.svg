@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="67.91877mm"
+   height="97.937126mm"
+   viewBox="0 0 67.91877 97.937129"
+   version="1.1"
+   id="svg1623"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="level.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1617" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.4629911"
+     inkscape:cx="170.93038"
+     inkscape:cy="217.21556"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-global="false"
+     inkscape:document-rotation="0"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid6135"
+       originx="-1.6634648"
+       originy="-1.2792037" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata1620">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-1.5240407,-0.86973536)">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke-width:4.5064;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       id="rect5055"
+       width="67.91877"
+       height="97.937126"
+       x="1.5240407"
+       y="0.86973536"
+       rx="0.005477814"
+       ry="12.001339">
+      <desc
+         id="desc5269">{&quot;component&quot;:&quot;Floor&quot;,
+&quot;properties&quot;: 
+{
+&quot;sourcePath&quot;:&quot;visuals/floor_tile&quot;,
+&quot;z&quot;:-1
+}
+}
+</desc>
+    </rect>
+  </g>
+</svg>
