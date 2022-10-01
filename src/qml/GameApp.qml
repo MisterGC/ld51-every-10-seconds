@@ -42,9 +42,12 @@ Rectangle
 
     Component {
         id: gameSceneComp;
-               GameScene{
-                   onRunningChanged: if (!running) transitionTo(gameSceneComp)
-               }
+        GameScene{
+            onRunningChanged: if (!running) {
+                                  gameState.save();
+                                  transitionTo(gameSceneComp);
+                              }
+        }
     }
 
     AssetProvider { id: assets }

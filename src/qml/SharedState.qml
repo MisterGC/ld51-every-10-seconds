@@ -56,6 +56,7 @@ Item {
         }
 
         function save() {
+            if (score > _highScore) _highScore = score;
             gameStorage.set(_cHIGH_SCORE, gameState._highScore);
         }
     }

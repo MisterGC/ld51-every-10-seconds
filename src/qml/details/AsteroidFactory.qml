@@ -19,7 +19,7 @@ RectBoxBody
 
     Timer{
         id: _asteroidSpawner
-        repeat: running; interval: 1000; running: gameScene.running
+        repeat: running; interval: 500; running: gameScene.running
         onTriggered: {
             let color = _colorPalette[_asteroidFactory.stage % _asteroidFactory._colorPalette.length]
             for (let i=0; i < _asteroidsPerSeconds; ++i)
