@@ -12,5 +12,6 @@
         <file>details/Spaceship.qml</file>
         <file>details/SpaceBoundary.qml</file>
         <file>details/AsteroidFactory.qml</file>
+        <file>details/Star.qml</file>
     </qresource>
 </RCC>

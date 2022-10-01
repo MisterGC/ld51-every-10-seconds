@@ -17,7 +17,7 @@ Rectangle
     SharedState { id: gameState }
     Component.onCompleted: {
         gameState.load();
-        transitionTo(gameSceneComp);
+        transitionTo(gameSceneComp, true);
     }
 
     StackView {

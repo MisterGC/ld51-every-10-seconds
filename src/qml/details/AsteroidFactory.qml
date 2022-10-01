@@ -18,15 +18,16 @@ RectBoxBody
     ]
 
     Timer{
-        id: _spawner
+        id: _asteroidSpawner
         repeat: running; interval: 1000; running: gameScene.running
         onTriggered: {
             let color = _colorPalette[_asteroidFactory.stage % _asteroidFactory._colorPalette.length]
             for (let i=0; i < _asteroidsPerSeconds; ++i)
             {
                 let e = _asteroidComp.createObject(gameScene.room, {"color": color});
-                e.Component.destruction.connect(_ => {_spawner.onAsteroidDestroyed();});
+                e.Component.destruction.connect(_ => {_asteroidSpawner.onAsteroidDestroyed();});
                 _numAsteroids++;
+                _starComp.createObject(gameScene.room);
                 //console.log("# Asteroids " + _numAsteroids)
             }
         }
@@ -36,27 +37,30 @@ RectBoxBody
         }
     }
 
+    Timer{
+        id: _starSpawner
+        repeat: running; interval: 100; running: gameScene.running
+        onTriggered: {
+                        _starComp.createObject(gameScene.room);
+        }
+    }
+
     on_NumAsteroidsChanged: {
         if(_numAsteroids == 0)
-           _spawner.running = true;
+           _asteroidSpawner.running = true;
     }
 
 
     Timer{
         id: _difficulty
-        repeat: true; interval: 10000; running: _spawner.running
+        repeat: true; interval: 10000; running: _asteroidSpawner.running
         onTriggered: {
-            _spawner.running = false;
+            _asteroidSpawner.running = false;
             _asteroidsPerSeconds++;
             stage++;
             //console.log("NEW Stage: " + stage)
         }
     }
-
-
-    property real yDirDesire: theGameCtrl.axisY
-    linearVelocity.y: 0//yDirDesire * veloCompMax
-
 
     Component
     {
@@ -64,7 +68,17 @@ RectBoxBody
         Asteroid{
             xWu: _asteroidFactory.xWu + Math.random() * (_asteroidFactory.widthWu - widthWu)
             yWu: _asteroidFactory.yWu - 2 * _asteroidFactory.heightWu
-            linearVelocity.y: 10 + Math.random() * (_asteroidFactory.stage + 1) - theGameCtrl.axisY * 10
+            linearVelocity.y: 15 + Math.random() * (_asteroidFactory.stage + 1) - theGameCtrl.axisY * 15
+        }
+    }
+
+    Component
+    {
+        id: _starComp
+        Star{
+            xWu: _asteroidFactory.xWu + Math.random() * (_asteroidFactory.widthWu - widthWu)
+            yWu: _asteroidFactory.yWu - 2 * _asteroidFactory.heightWu
+            linearVelocity.y: 3 + Math.random() - theGameCtrl.axisY * 5
         }
     }
 }
