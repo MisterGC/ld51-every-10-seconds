@@ -6,7 +6,7 @@ import Clayground.Physics
 RectBoxBody
 {
     id: _asteroidFactory
-    property int _asteroidsPerSeconds: stage
+    property int _asteroidsPerSeconds: 4 + stage
     property int _numAsteroids: 0
     property int stage: 1
     property var _colorPalette: [
@@ -19,21 +19,19 @@ RectBoxBody
 
     Timer{
         id: _asteroidSpawner
-        repeat: running; interval: 500; running: gameScene.running
+        repeat: running; interval: 250; running: gameScene.running
         onTriggered: {
             let color = _colorPalette[_asteroidFactory.stage % _asteroidFactory._colorPalette.length]
-            for (let i=0; i < _asteroidsPerSeconds; ++i)
+            for (let i=0; i < _asteroidsPerSeconds *(interval/1000); ++i)
             {
                 let e = _asteroidComp.createObject(gameScene.room, {"color": color});
                 e.Component.destruction.connect(_ => {_asteroidSpawner.onAsteroidDestroyed();});
                 _numAsteroids++;
                 _starComp.createObject(gameScene.room);
-                //console.log("# Asteroids " + _numAsteroids)
             }
         }
         function onAsteroidDestroyed(){
             _numAsteroids--;
-            //console.log("# Asteroids " + _numAsteroids)
         }
     }
 
