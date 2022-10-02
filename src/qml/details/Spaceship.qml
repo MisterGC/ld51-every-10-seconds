@@ -21,7 +21,7 @@ RectBoxBody
     visible: isAlive
     onIsAliveChanged: {
         if (!isAlive){
-            yDirDesire = 0;
+            fullThrottle = false;
             _destructionSound.play();
             _destructionAnimComp.createObject(player.parent,
                                               {
@@ -44,7 +44,7 @@ RectBoxBody
 
     readonly property real veloCompMax: 20
     property real xDirDesire: theGameCtrl.axisX
-    property real yDirDesire: theGameCtrl.axisY
+    property bool fullThrottle: false
 
     GameSound{
         id: _engineSound
@@ -52,9 +52,9 @@ RectBoxBody
         loops: SoundEffect.Infinite
     }
 
-    onYDirDesireChanged: {
-        if (yDirDesire < -0.1) _engineSound.play();
-        else _engineSound.stop();
+    onFullThrottleChanged: {
+//        if (fullThrottle) _engineSound.play();
+//        else _engineSound.stop();
     }
 
     linearVelocity.x: xDirDesire * veloCompMax
@@ -106,11 +106,12 @@ RectBoxBody
 
     ParticleSystem {
         anchors {horizontalCenter: player.horizontalCenter; top: player.bottom}
+        z: -1
         Emitter {
             id: _emitter
-            enabled: yDirDesire < -.1
+            enabled: player.isAlive
             anchors.centerIn: parent
-            lifeSpan: 50 - yDirDesire * 100
+            lifeSpan: 50 + (fullThrottle ? 100 : 0)
             endSize: 1
             emitRate: 15
             velocity: AngleDirection{

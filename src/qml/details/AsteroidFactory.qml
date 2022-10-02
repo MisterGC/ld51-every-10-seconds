@@ -6,9 +6,10 @@ import Clayground.Physics
 RectBoxBody
 {
     id: _asteroidFactory
-    property int _asteroidsPerSeconds: 4 + stage
+    property int _asteroidsPerSeconds: 2 + stage
     property int _numAsteroids: 0
     property int stage: 1
+    readonly property color stageColor: _colorPalette[stage % _colorPalette.length]
     property var _colorPalette: [
         gameState.cBLUE,
         gameState.cGREEN,
@@ -16,15 +17,18 @@ RectBoxBody
         gameState.cRED,
         gameState.cYELLOW
     ]
+    readonly property bool spawnsAsteroids: _asteroidSpawner.running
 
     Timer{
         id: _asteroidSpawner
-        repeat: running; interval: 250; running: gameScene.running
+        repeat: running; interval: 500; running: gameScene.running
         onTriggered: {
-            let color = _colorPalette[_asteroidFactory.stage % _asteroidFactory._colorPalette.length]
             for (let i=0; i < _asteroidsPerSeconds *(interval/1000); ++i)
             {
-                let e = _asteroidComp.createObject(gameScene.room, {"color": color});
+                let e = _asteroidComp.createObject(gameScene.room, {
+                                                       "color": _asteroidFactory.stageColor,
+                                                       "myStage": stage
+                                                   });
                 e.Component.destruction.connect(_ => {_asteroidSpawner.onAsteroidDestroyed();});
                 _numAsteroids++;
                 _starComp.createObject(gameScene.room);
@@ -56,11 +60,8 @@ RectBoxBody
             _asteroidSpawner.running = false;
             _asteroidsPerSeconds++;
             stage++;
-            //console.log("NEW Stage: " + stage)
         }
     }
-
-    readonly property real yDirDesire: theGameCtrl.axisY <= 0 ? theGameCtrl.axisY : 0
 
     Component
     {
@@ -68,7 +69,7 @@ RectBoxBody
         Asteroid{
             xWu: _asteroidFactory.xWu + Math.random() * (_asteroidFactory.widthWu - widthWu)
             yWu: _asteroidFactory.yWu - 2 * _asteroidFactory.heightWu
-            linearVelocity.y: 15 + Math.random() * (_asteroidFactory.stage + 1) - yDirDesire * 15
+            linearVelocity.y: relevant ? 15 + _asteroidFactory.stage : 100
         }
     }
 
@@ -78,7 +79,7 @@ RectBoxBody
         Star{
             xWu: _asteroidFactory.xWu + Math.random() * (_asteroidFactory.widthWu - widthWu)
             yWu: _asteroidFactory.yWu - 2 * _asteroidFactory.heightWu
-            linearVelocity.y: 3 + Math.random() - yDirDesire * 5
+            linearVelocity.y: 3 + Math.random()
         }
     }
 }

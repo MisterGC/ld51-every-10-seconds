@@ -10,11 +10,18 @@ RectBoxBody
 {
     id: _asteroid
 
+    readonly property bool relevant: currentStage == myStage
+    scale: relevant ? 1 : 0.2
+    Behavior on scale {NumberAnimation{duration: 1000}}
+
     categories: collCat.asteroid
-    collidesWith: collCat.staticGeo | collCat.player
+    collidesWith: relevant ? (collCat.staticGeo | collCat.player) : collCat.staticGeo
     bodyType: Body.Dynamic
     widthWu: 3 + Math.random()
     heightWu: widthWu
+
+    readonly property int myStage: 0
+    readonly property int currentStage: _asteroidFactory.stage
 
     Component.onCompleted:
     {
