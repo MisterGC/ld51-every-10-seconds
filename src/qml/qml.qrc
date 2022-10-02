@@ -13,5 +13,6 @@
         <file>details/SpaceBoundary.qml</file>
         <file>details/AsteroidFactory.qml</file>
         <file>details/Star.qml</file>
+        <file>GameInfoScreen.qml</file>
     </qresource>
 </RCC>

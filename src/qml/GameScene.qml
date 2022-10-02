@@ -12,6 +12,11 @@ import Clayground.Behavior
 import "details"
 Item {
     property alias running: gameScene.running
+
+    onRunningChanged: if (!running) _gameOverTimer.start()
+    Timer {id: _gameOverTimer; interval: 2000; onTriggered: gameOver()}
+    signal gameOver()
+
     Keys.forwardTo: theGameCtrl
 
         Text {

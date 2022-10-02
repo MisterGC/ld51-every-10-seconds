@@ -17,13 +17,13 @@ Rectangle
     SharedState { id: gameState }
     Component.onCompleted: {
         gameState.load();
-        transitionTo(gameSceneComp, true);
+        transitionTo(gameInfoComp);
     }
 
     StackView {
         id: stack
         anchors.fill: parent
-        initialItem: gameSceneComp
+        initialItem: gameInfoComp
         replaceEnter: Transition {
             PropertyAnimation {
                 property: "opacity"
@@ -41,12 +41,20 @@ Rectangle
     }
 
     Component {
+        id: gameInfoComp;
+        GameInfoScreen{
+            onStartRequested: transitionTo(gameSceneComp, true)
+
+        }
+    }
+
+    Component {
         id: gameSceneComp;
         GameScene{
-            onRunningChanged: if (!running) {
-                                  gameState.save();
-                                  transitionTo(gameSceneComp);
-                              }
+            onGameOver: {
+                gameState.save();
+                transitionTo(gameInfoComp);
+            }
         }
     }
 
