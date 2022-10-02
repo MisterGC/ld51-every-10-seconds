@@ -6,6 +6,13 @@ that has to find its way through a lot obstacles. Every 10 seconds it gets more 
 
 ![in-game](doc/in-game.png)
 
-## Development 
+## Development
 
 ![idea](doc/idea.jpg)
+
+Used Tools/Frameworks/Technologies:
+
+- Qt 6.3/4 
+- Clayground
+- Audacity
+- Inkscape
