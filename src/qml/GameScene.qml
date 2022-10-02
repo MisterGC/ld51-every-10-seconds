@@ -8,6 +8,7 @@ import Box2D
 import Clayground.GameController
 import Clayground.World
 import Clayground.Behavior
+import Clayground.Common
 
 import "details"
 Item {
@@ -68,7 +69,7 @@ Item {
     ClayWorld {
         id: gameScene
         anchors.centerIn: parent
-        width: .6 * parent.width
+        width: (Clayground.runsInSandbox ? 1 : .6) * parent.width
         height: parent.height
 
         Component.onCompleted:

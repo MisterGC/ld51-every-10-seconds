@@ -5,6 +5,7 @@ import Clayground.Physics
 
 RectBoxBody
 {
+    color: "transparent"
     Component.onCompleted: PhysicsUtils.connectOnEntered(fixtures[0], _onEntered)
     categories: collCat.staticGeo
     collidesWith: collCat.asteroid

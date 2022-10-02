@@ -6,6 +6,7 @@ import Clayground.Physics
 RectBoxBody
 {
     id: _asteroidFactory
+    color: "transparent"
     property int _asteroidsPerSeconds: 2 + stage
     property int _numAsteroids: 0
     property int stage: 1
