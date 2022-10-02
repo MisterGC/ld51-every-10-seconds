@@ -50,11 +50,8 @@ RectBoxBody
         id: _engineSound
         sound:"engine"
         loops: SoundEffect.Infinite
-    }
-
-    onFullThrottleChanged: {
-//        if (fullThrottle) _engineSound.play();
-//        else _engineSound.stop();
+        volume: player.fullThrottle ? 1 : .3
+        Component.onCompleted: play()
     }
 
     linearVelocity.x: xDirDesire * veloCompMax
