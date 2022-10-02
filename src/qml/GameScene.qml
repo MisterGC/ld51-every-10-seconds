@@ -67,7 +67,9 @@ Item {
 
     ClayWorld {
         id: gameScene
-        anchors.fill: parent
+        anchors.centerIn: parent
+        width: .6 * parent.width
+        height: parent.height
 
         Component.onCompleted:
         {
