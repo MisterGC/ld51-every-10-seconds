@@ -21,7 +21,7 @@ Item {
 
         Text {
             z: 99
-            Timer { interval: 100; running: true; repeat: true;
+            Timer { interval: 100; running: gameScene.running ; repeat: true;
                 onTriggered: gameState.score += 100;
             }
             anchors {right: parent.right; top: parent.top}
