@@ -12,7 +12,7 @@ RectBoxBody
 
     readonly property bool relevant: currentStage == myStage
     scale: relevant ? 1 : 0.2
-    Behavior on scale {NumberAnimation{duration: 1000}}
+    Behavior on scale {NumberAnimation{duration: 750}}
 
     categories: collCat.asteroid
     collidesWith: relevant ? (collCat.staticGeo | collCat.player) : collCat.staticGeo
