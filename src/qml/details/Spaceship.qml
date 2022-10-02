@@ -29,6 +29,26 @@ RectBoxBody
     readonly property real veloCompMax: 20
     property real xDirDesire: theGameCtrl.axisX
     property real yDirDesire: theGameCtrl.axisY
+
+    GameSound{
+        id: _engineSound
+        sound:"engine"
+        loops: SoundEffect.Infinite
+    }
+    onYDirDesireChanged: {
+        console.log("Check da sound " + _engineSound.status + " " + SoundEffect.Loading)
+        if (Math.abs(yDirDesire) > 0.1)
+        {
+            console.log("Play it ");
+           _engineSound.play();
+        }
+        else
+        {
+            console.log("Stop it");
+            _engineSound.stop();
+        }
+    }
+
     linearVelocity.x: xDirDesire * veloCompMax
 
     Rectangle {
