@@ -60,13 +60,15 @@ RectBoxBody
         }
     }
 
+    readonly property real yDirDesire: theGameCtrl.axisY <= 0 ? theGameCtrl.axisY : 0
+
     Component
     {
         id: _asteroidComp
         Asteroid{
             xWu: _asteroidFactory.xWu + Math.random() * (_asteroidFactory.widthWu - widthWu)
             yWu: _asteroidFactory.yWu - 2 * _asteroidFactory.heightWu
-            linearVelocity.y: 15 + Math.random() * (_asteroidFactory.stage + 1) - theGameCtrl.axisY * 15
+            linearVelocity.y: 15 + Math.random() * (_asteroidFactory.stage + 1) - yDirDesire * 15
         }
     }
 
@@ -76,7 +78,7 @@ RectBoxBody
         Star{
             xWu: _asteroidFactory.xWu + Math.random() * (_asteroidFactory.widthWu - widthWu)
             yWu: _asteroidFactory.yWu - 2 * _asteroidFactory.heightWu
-            linearVelocity.y: 3 + Math.random() - theGameCtrl.axisY * 5
+            linearVelocity.y: 3 + Math.random() - yDirDesire * 5
         }
     }
 }
