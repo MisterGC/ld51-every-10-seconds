@@ -18,6 +18,22 @@ RectBoxBody
 
     property int shield: 1
     readonly property bool isAlive: shield > 0
+    visible: isAlive
+    onIsAliveChanged: {
+        if (!isAlive){
+            yDirDesire = 0;
+            _destructionSound.play();
+            _destructionAnimComp.createObject(player.parent,
+                                              {
+                                                  "x": player.x,
+                                                  "y": player.y,
+                                                  "width": player.width,
+                                                  "height": player.height
+                                              }
+
+                                              );
+        }
+    }
 
     Component.onCompleted: {
         PhysicsUtils.connectOnEntered(fixtures[0], _onCollision)
@@ -116,6 +132,41 @@ RectBoxBody
                 height: width
                 color:  gameState.cORANGE
                 //rotation: Math.random() * 20
+
+    GameSound{
+        id: _destructionSound
+        sound:"crash"
+        loops: SoundEffect.Infinite
+    }
+
+    Component {
+        id: _destructionAnimComp
+
+        ParticleSystem {
+            id: _destructionAnim
+            property int numParts: 30
+            property real partBaseSize: height / Math.sqrt(numParts)
+            Component.onCompleted: emitter.burst(numParts)
+            Emitter {
+                id: emitter
+                enabled: false
+                anchors.centerIn: parent
+                lifeSpan: 5000
+                velocity: AngleDirection{
+                    magnitude: _destructionAnim.height
+                    magnitudeVariation: magnitude * .3
+                    angleVariation: 360
+                }
+            }
+            ItemParticle {
+                delegate: Rectangle {
+                    width: _destructionAnim.partBaseSize +
+                           Math.random() * (_destructionAnim.partBaseSize * .25)
+                    height: width
+                    readonly property real r: 0.5 + Math.random() * .5
+                    color: Qt.rgba(r, r, r, 1)
+                    rotation: Math.random() * 360
+                }
             }
         }
     }
