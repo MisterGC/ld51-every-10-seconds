@@ -37,7 +37,7 @@ RectBoxBody
 
     Timer{
         id: _starSpawner
-        repeat: running; interval: 100; running: gameScene.running
+        repeat: running; interval: 150; running: gameScene.running
         onTriggered: {
                         _starComp.createObject(gameScene.room);
         }
