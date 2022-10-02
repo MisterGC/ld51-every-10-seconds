@@ -51,18 +51,10 @@ RectBoxBody
         sound:"engine"
         loops: SoundEffect.Infinite
     }
+
     onYDirDesireChanged: {
-        console.log("Check da sound " + _engineSound.status + " " + SoundEffect.Loading)
-        if (Math.abs(yDirDesire) > 0.1)
-        {
-            console.log("Play it ");
-           _engineSound.play();
-        }
-        else
-        {
-            console.log("Stop it");
-            _engineSound.stop();
-        }
+        if (yDirDesire < -0.1) _engineSound.play();
+        else _engineSound.stop();
     }
 
     linearVelocity.x: xDirDesire * veloCompMax
@@ -116,9 +108,9 @@ RectBoxBody
         anchors {horizontalCenter: player.horizontalCenter; top: player.bottom}
         Emitter {
             id: _emitter
-            enabled: true
+            enabled: yDirDesire < -.1
             anchors.centerIn: parent
-            lifeSpan: 150 - yDirDesire * 100
+            lifeSpan: 50 - yDirDesire * 100
             endSize: 1
             emitRate: 15
             velocity: AngleDirection{
@@ -128,10 +120,12 @@ RectBoxBody
 
         ItemParticle {
             delegate: Rectangle {
-                width: player.width *.4 + player.width * .1 * Math.random()
+                width: player.width *.7 + player.width * .1 * Math.random()
                 height: width
-                color:  gameState.cORANGE
-                //rotation: Math.random() * 20
+                color:  Qt.lighter(gameState.cBLUE, 1.6)
+            }
+        }
+    }
 
     GameSound{
         id: _destructionSound
